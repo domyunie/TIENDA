@@ -1,0 +1,96 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD Usuarios</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+  <link rel="icon" type="image/png" href="../logo.png">
+  <link rel="stylesheet" href="../CSS/crud.css">
+</head>
+<body>
+  <div class="container">
+    <h1>CRUD Usuarios</h1>
+
+    <div class="form-box">
+      <h3 id="formTitle">Agregar Usuario</h3>
+      <input type="text"  id="nombre" placeholder="Nombre">
+      <input type="email" id="email"  placeholder="Email">
+      <button class="btn btn-add" onclick="guardar()">Guardar</button>
+    </div>
+
+
+    <div class="table-box">
+      <a href="#" onclick="toggleGrafica(); return false;" class="btn-grafica">Gráfica</a>
+      <br><br><hr style="border-color:rgba(255,255,255,0.1)"><br>
+      <a href="#" onclick="toggleReporte(); return false;" class="btn-reporte">Reporte</a>
+
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tablaUsuarios"></tbody>
+      </table>
+    </div>
+
+
+
+    <div id="graficaSection">
+      <h3>Gráfica de Usuarios</h3>
+      <div id="chartWrapper">
+        <canvas id="myChart"></canvas>
+        <p class="empty-msg" id="graficaEmpty" style="display:none;">
+          No hay usuarios registrados aún.
+        </p>
+      </div>
+      <br>
+      <button class="btn btn-add" onclick="toggleGrafica()">Cerrar Gráfica</button>
+    </div>
+
+    <div id="reporteSection">
+      <h3>Reporte de Usuarios</h3>
+      <div class="reporte-stats">
+        <div class="stat-card">
+          <div class="num" id="statTotal">0</div>
+          <div class="label">Total usuarios</div>
+        </div>
+        <div class="stat-card">
+          <div class="num" id="statPrimero">—</div>
+          <div class="label">Primer usuario</div>
+        </div>
+        <div class="stat-card">
+          <div class="num" id="statUltimo">—</div>
+          <div class="label">Último usuario</div>
+        </div>
+      </div>
+
+      <table id="tablaReporte">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody id="tbodyReporte"></tbody>
+      </table>
+      <br>
+ 
+      <button class="btn btn-add" onclick="exportarPDF()">Exportar PDF</button>
+      <button class="btn btn-add" onclick="toggleReporte()">Cerrar Reporte</button>
+    </div>
+
+  </div>
+
+   <footer>
+        <p>Made by Sarah Recinos &mdash; Tienda Rosas &copy; 2026</p>
+    </footer>
+
+  <script src="../JS/script.js"></script>
+</body>
+</html>
