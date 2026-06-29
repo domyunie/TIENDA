@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Rosas</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <img class="logo" src="../MULTIMEDIA/logo.png" alt="Logo Tienda Rosas">
+            <h1 class="site-title">Tienda Rosas</h1>
+            <div class="cart-icon" title="Ver carrito">
+                 <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <input type="checkbox" id="menu-toggle">
+        <label class="menu-label" for="menu-toggle">☰ Menú</label>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+   
+    <main>
+
+    
+        <h1>Carrusel de Imágenes</h1>
+
+        <section class="slider">
+
+
+            <span id="img1"></span>
+            <span id="img2"></span>
+            <span id="img3"></span>
+            <span id="img4"></span>
+
+    
+            <div class="slider-nav">
+                <a href="#img1">1</a>
+                <a href="#img2">2</a>
+                <a href="#img3">3</a>
+                <a href="#img4">4</a>
+            </div>
+
+          
+            <div class="slides">
+                <div class="slide">
+                    <img src="../multimedia/imagen1.jpg" alt="Collar Cruz">
+                </div>
+                <div class="slide">
+                    <img src="../multimedia/imagen2.jpg" alt="Anillos Ataúd">
+                </div>
+                <div class="slide">
+                    <img src="../multimedia/imagen3.jpg" alt="Collar Elegante Rojo">
+                </div>
+                <div class="slide">
+                    <img src="../multimedia/imagen4.jpg" alt="Broche Rosa Roja">
+                </div>
+            </div>
+
+        </section>
+
+    
+        <h2 class="products-title">Nuestros Productos</h2>
+
+        <section class="products">
+
+            <div class="product-card">
+                <img src="../multimedia/imagen1.jpg" alt="Collar Cruz">
+                <h3>Collar Cruz</h3>
+                <p class="precio">$12.00</p>
+                <button class="add-btn" data-id="1" data-name="Collar Cruz" data-price="12">
+                    🛒 Añadir al carrito
+                </button>
+            </div>
+
+            <div class="product-card">
+                <img src="../multimedia/imagen2.jpg" alt="Anillos Ataúd">
+                <h3>Anillos Ataúd</h3>
+                <p class="precio">$5.00</p>
+                <button class="add-btn" data-id="2" data-name="Anillos Ataúd" data-price="5">
+                    🛒 Añadir al carrito
+                </button>
+            </div>
+
+            <div class="product-card">
+                <img src="../multimedia/imagen3.jpg" alt="Collar Elegante Rojo">
+                <h3>Collar Elegante Rojo</h3>
+                <p class="precio">$15.00</p>
+                <button class="add-btn" data-id="3" data-name="Collar Elegante Rojo" data-price="15">
+                    🛒 Añadir al carrito
+                </button>
+            </div>
+
+            <div class="product-card">
+                <img src="../multimedia/imagen4.jpg" alt="Broche Rosa Roja">
+                <h3>Broche Rosa Roja</h3>
+                <p class="precio">$7.00</p>
+                <button class="add-btn" data-id="4" data-name="Broche Rosa Roja" data-price="7">
+                    🛒 Añadir al carrito
+                </button>
+            </div>
+
+        </section>
+
+        <!-- CARRITO -->
+        <section class="cart-container">
+            <h2>Tu Carrito</h2>
+            <ul id="cart-items">
+                <li class="cart-empty">El carrito está vacío.</li>
+            </ul>
+            <div class="total-section">
+                <strong>Total: $<span id="total-price">0.00</span></strong>
+                <button id="clear-cart">🗑 Vaciar carrito</button>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>Made by Sarah Recinos &mdash; Tienda Rosas &copy; 2026</p>
+    </footer>
+
+    <script src="../JS/function.js"></script>
+</body>
+</html>
