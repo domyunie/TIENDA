@@ -33,3 +33,12 @@ header {
     border-radius: 100px;
     object-fit: contain;
 }
+
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    font-size: 0.9rem;
+}

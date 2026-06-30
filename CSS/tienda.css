@@ -136,3 +136,12 @@ main h1 {
     color: #333;
     letter-spacing: 1px;
 }
+
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    font-size: 0.9rem;
+}
