@@ -4,7 +4,7 @@ const cartItemsList = document.getElementById('cart-items');
 const totalPriceEl  = document.getElementById('total-price');
 const cartCountEl   = document.getElementById('cart-count');
 
-// Botones "Añadir al carrito"
+
 document.querySelectorAll('.add-btn').forEach(button => {
     button.addEventListener('click', (e) => {
         const id    = e.target.getAttribute('data-id');
@@ -52,8 +52,27 @@ function updateUI() {
     cartCountEl.textContent  = count;
 }
 
-// Vaciar carrito
+
 document.getElementById('clear-cart').addEventListener('click', () => {
     cart = [];
     updateUI();
+});
+
+
+document.getElementById('enlace-crud').addEventListener('click', function(e) {
+  
+  e.preventDefault(); 
+
+  const session = JSON.parse(localStorage.getItem('userSession'));
+
+  
+  if (session && session.role === 'admin') {
+    window.location.href = this.href; 
+  } else {
+   
+    alert('Acceso restringido. Por favor, inicia sesión como administrador.');
+    
+    localStorage.setItem('urlPrevia', window.location.href);
+    window.location.href = '../HTML/login.html'; 
+  }
 });

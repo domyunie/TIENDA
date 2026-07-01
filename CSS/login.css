@@ -145,9 +145,9 @@ main h1 {
 form {
     background: rgb(255, 255, 255);
     padding: 60px;
-    width: 500px;
-    height: 600px;
-    border-radius: 20px;
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
     text-align: center;
     margin: 140px auto;
     outline: none;
@@ -175,7 +175,7 @@ form {
 }
 
 .submit-bttn button:hover {
-    color: #000000;
+    color: #ffffff;
     border-color: #6d676b;
     transform: scale(1.02);
     box-shadow: 0 0 20px rgba(99, 93, 99, 0.868);
