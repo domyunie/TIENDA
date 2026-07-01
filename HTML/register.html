@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link ref="stylesheet" href="../CSS/register.css">
 </head>
 <body>
 
@@ -24,13 +25,33 @@
             <li><a href="../HTML/inicio.html">Inicio</a></li>
             <li><a href="../HTML/tienda.html">Productos</a></li>
             <li><a href="../HTML/contactanos.html">Contacto</a></li>
-            <li><a href="../HTML/login.html">Crud</a></li>
+            <li><a id="enlace-crud" href="../HTML/crud.html">Crud</a></li>
         </ul>
     </nav>
+
+    <div>
+        <div class="form">
+            <form action="">
+            <h1>Crea una cuenta de Canrisk!</h1><br>
+             <label class ="User-text"for="contraseña">Nombre:</label><br><br>
+            <input type="text" id="name" name="name" placeholder="Ingrese su nombre" class="name" required><br>
+            <label class ="User-text"for="usuario">Usuario:</label><br>
+            <input type="text" id="usuario" name="usuario" placeholder="Ingrese su usuario" class="username" required><br>
+            <label class ="User-text"for="contraseña">Contraseña:</label><br><br>
+            <input type="password" id="contrasena" name="contraseña" placeholder="Ingrese su contraseña" class="password" required><br>
+            <div class ="submit-bttn">
+                <button type="submit" class="submit-bttn" id="submit-bttn">Crear</button>
+                <label class="submit-bttn" for="submit" ></label>
+            </div>
+            </form>
+        </div>
+    </div>    
 
     <footer>
         <p>Made by Sarah Recinos &mdash; Tienda Rosas &copy; 2026</p>
     </footer>
-    
+
+    <script src="../JS/register.js"></script>
+     
 </body>
 </html>

@@ -27,12 +27,12 @@
           <li><a href="../HTML/inicio.html">Inicio</a></li>
           <li><a href="../HTML/tienda.html">Productos</a></li>
           <li><a href="../HTML/contactanos.html">Contacto</a></li>
-          <li><a href="../HTML/login.html">Crud</a></li>
+          <li><a id="enlace-crud" href="../HTML/crud.html">Crud</a></li>
       </ul>
   </nav>
 
 
-  <div class="container">
+   <div class="container">
     <h1>CRUD Usuarios</h1>
 
     <div class="form-box">
@@ -62,6 +62,51 @@
     </div>
 
 
+<div>
+    <h3>Hola de nuevo admin! Hoy será un buen dia, no lo olvides! :D</h3>
+</div>
+
+<div class="content content-center">
+    <img src="../MULTIMEDIA/chucho.png" alt="Chucho" class="img-neon"> 
+</div>
+
+<script>
+    const imgs = document.querySelectorAll('.img-neon'); 
+    window.addEventListener('scroll', () => {
+        imgs.forEach(img => {
+            const top = img.getBoundingClientRect().top;
+            if (top < window.innerHeight - 100) {
+                img.classList.add('show'); 
+            }
+        });
+    });
+</script>
+
+   <h1>TABLA DE REGISTRO TRABAJADORES</h1>
+    <div class="tabla">
+        <table>
+            <tr>
+                <th class="th">Nombre</th>
+                <th class="th">Apellido</th>
+                <th class="th">Pais</th>
+                <th class="th">Número de Telefono</th>
+            </tr>
+
+            <tr>
+                <td class="td">Dominic</td>
+                <td class="td">Recinos</td>
+                <td class="td">El Salvador</td>
+                <td class="td">7332 8090</td>
+            </tr>
+
+            <tr>
+                <td class="td">Diego</td>
+                <td class="td">Rosales</td>
+                <td class="td">El Salvador</td>
+                <td class="td">7489 0890</td>
+            </tr>
+        </table>
+    </div>
 
     <div id="graficaSection">
       <h3>Gráfica de Usuarios</h3>
@@ -114,6 +159,6 @@
         <p>Made by Sarah Recinos &mdash; Tienda Rosas &copy; 2026</p>
     </footer>
 
-  <script src="../JS/script.js"></script>
+  <script src="../JS/crud.js"></script>
 </body>
 </html>
