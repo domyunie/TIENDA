@@ -43,4 +43,7 @@ function loginUser(e) {
   } else {
     alert("Credenciales inválidas");
   }
+
 }
+
+localStorage.removeItem("userSession")
