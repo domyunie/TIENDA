@@ -1,69 +1,98 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tienda Rosas</title>
-    <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="icon" type="image/png" href="../MULTIMEDIA/rose.png">
-</head>
-<body>
-
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="icon" type="image/png" href="../MULTIMEDIA/rose.png" />
+  </head>
+  <body>
     <header>
-        <div class="header-inner">
-            <img class="logo" src="../MULTIMEDIA/logo.png" alt="Logo Tienda Rosas">
-            <h1 class="site-title">Tienda Rosas</h1>
-            <div class="cart-icon" title="Ver carrito">
-                 <span id="cart-count">0</span>
-            </div>
+      <div class="header-inner">
+        <img
+          class="logo"
+          src="../MULTIMEDIA/logo.png"
+          alt="Logo Tienda Rosas"
+        />
+        <h1 class="site-title">Tienda Rosas</h1>
+        <div class="cart-icon" title="Ver carrito">
+          <span id="cart-count">0</span>
         </div>
+      </div>
     </header>
 
-     <nav>
-        <input type="checkbox" id="menu-toggle">
-        <label class="menu-label" for="menu-toggle">☰ Menú</label>
-        <ul>
-            <li><a href="../HTML/inicio.html">Inicio</a></li>
-            <li><a href="../HTML/tienda.html">Productos</a></li>
-            <li><a href="../HTML/contactanos.html">Contacto</a></li>
-            <li><a id="enlace-crud" href="../HTML/crud.html">Crud</a></li>
-            <li><a href="../HTML/register.html">Registrate</a></li>
-            <li><a href="../HTML/login.html">Inicia Sesión</a></li>
-        </ul>
-    </nav>    
+    <nav>
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-label" for="menu-toggle">☰ Menú</label>
+      <ul>
+        <li><a href="../HTML/inicio.html">Inicio</a></li>
+        <li><a href="../HTML/tienda.html">Productos</a></li>
+        <li><a href="../HTML/contactanos.html">Contacto</a></li>
+        <li><a id="enlace-crud" href="../HTML/crud.html">Crud</a></li>
+        <li><a href="../HTML/register.html">Registrate</a></li>
+        <li><a href="../HTML/login.html">Inicia Sesión</a></li>
+      </ul>
+    </nav>
 
-   <div id="carouselExampleIndicators" class="carousel slide">
-   <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-   </div>
-   <div class="carousel-inner">
-   <div class="carousel-item active">
-      <img src="..." class="d-block w-100" alt="...">
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="..." class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="..." class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="..." class="d-block w-100" alt="..." />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
 
-    
     <footer>
-        <p>Made by Sarah Recinos &mdash; Tienda Rosas &copy; 2026</p>
+      <p>Made by Sarah Recinos &mdash; Tienda Rosas &copy; 2026</p>
     </footer>
 
     <script src="../JS/function.js"></script>
-</body>
+  </body>
 </html>
