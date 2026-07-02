@@ -4,7 +4,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const usuarioInput = document.getElementById("usuario");
   const contrasenaInput = document.getElementById("contrasena");
 
-  let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+  let cuentas = JSON.parse(localStorage.getItem("cuentas")) || [];
+
+  const adminExiste = cuentas.find((u) => u.usuario === "admin");
+  if (!adminExiste) {
+    cuentas.push({
+      id: Date.now(),
+      nombre: "Administrador",
+      usuario: "admin",
+      contrasena: "admin123",
+      role: "admin",
+      fechaRegistro: new Date().toLocaleDateString("es-ES"),
+    });
+    localStorage.setItem("cuentas", JSON.stringify(cuentas));
+  }
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -17,34 +30,35 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!validarUsuario(usuario)) return;
     if (!validarContrasena(contrasena)) return;
 
-    const usuarioExiste = usuarios.find((u) => u.usuario === usuario);
+    if (usuario.toLowerCase() === "admin") {
+      alert("Tu nombre de usuario no puede ser 'admin'. Elige otro.");
+      usuarioInput.focus();
+      return;
+    }
+
+    const usuarioExiste = cuentas.find((u) => u.usuario === usuario);
     if (usuarioExiste) {
       alert("Ese nombre de usuario ya está en uso. Elige otro.");
       usuarioInput.focus();
       return;
-    }else{
-        const usuarioExiste = admin.find((u) => u.admin === admin)
-        if (usuarioExiste) {
-          alert("Tu nombre de usuario no puede ser admin. Elige otro.");
-          usuarioInput.focus();
-          return;
-    }}
+    }
 
-    const nuevoUsuario = {
+    const nuevaCuenta = {
       id: Date.now(),
       nombre: name,
       usuario: usuario,
       contrasena: contrasena,
+      role: "user",
       fechaRegistro: new Date().toLocaleDateString("es-ES"),
     };
 
-    usuarios.push(nuevoUsuario);
-    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    cuentas.push(nuevaCuenta);
+    localStorage.setItem("cuentas", JSON.stringify(cuentas));
 
-    console.log("📋 Usuarios registrados:", usuarios);
-    alert(`¡Registro exitoso! Bienvenido, ${name} 🎉`);
+    console.log("Cuentas registradas:", cuentas);
+    alert(`¡Registro exitoso! Bienvenido, ${name}`);
 
-    window.location.href = "../HTML/login.html"; 
+    window.location.href = "../HTML/login.html";
   });
 
   function validarNombre(name) {
