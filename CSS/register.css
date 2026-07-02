@@ -165,7 +165,7 @@ form {
 }
 
 .submit-bttn button {
-     width: 100%;
+    width: 100%;
     height: 50px;
     padding: 10px 15px;
     background: #555;
@@ -214,6 +214,16 @@ form {
     font-size: 18px;
 }
 
+.name {
+    background: #ffffff;
+    border-radius: 10px;
+    width: 100%;
+    height: 45px;
+    padding: 10px 15px;
+    border: 1px solid #afafaf;
+    outline: none;
+    font-size: 18px;
+}
 
 footer {
     background: #333;
